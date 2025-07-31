@@ -69,16 +69,21 @@ main {
 }
 
 .landing-1 {
-    padding: 10% 2% 5% 2%;
+    padding: 10% 2% 5% 8%;
+    display: flex;
+    flex-direction: row;
+    max-height: 100vh;
+    height: 100%;
+    gap: 15rem;
 }
 
 .intro-text {
     width: 100%;
+    padding-top: 3%;
 }
 
 .isi-text {
-    width: 50%;
-    margin-left: 5%;
+    width: 100%;
 }
 
 h1.intro-head {
@@ -178,3 +183,15 @@ p.eks-pla {
     color: #fff;
     border: 2px solid #bbbeb9;
 }
+
+.poto-land {
+    width: 700px;
+    height: 520px;
+}
+
+.gambar-hero {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+

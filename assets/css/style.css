@@ -62,3 +62,119 @@ span.Daftar1 {
     height: 100%;
     padding: 0 1% 0 0;
 }
+
+main {
+    margin-top: 3%;
+    padding: 0;
+}
+
+.landing-1 {
+    padding: 10% 2% 5% 2%;
+}
+
+.intro-text {
+    width: 100%;
+}
+
+.isi-text {
+    width: 50%;
+    margin-left: 5%;
+}
+
+h1.intro-head {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+b.sub-intro {
+    color: #6cb83d;
+}
+
+p.eks-pla {
+    margin-top: 4%;
+}
+
+.tombol-intro {
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+}
+
+.btn.tombol-ganti {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6% 8.5%;
+  background: #56813c;
+  border: 2px solid #56813c;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s ease;
+  overflow: hidden;
+}
+
+.btn.tombol-ganti .text-tombol {
+  transition: opacity 0.3s, visibility 0.3s ease;
+  opacity: 1;
+  visibility: visible;
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.btn.tombol-ganti .ikon-daftar {
+  font-size: 22px;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s, color 0.3s ease;
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn.tombol-ganti:hover,
+.btn.tombol-ganti:focus {
+  background: #fff;
+  color: #56813c;
+  border-color: #56813c;
+}
+
+.btn.tombol-ganti:hover .text-tombol,
+.btn.tombol-ganti:focus .text-tombol {
+  opacity: 0;
+  visibility: hidden;
+  transition-delay: 0s;
+}
+
+.btn.tombol-ganti:hover .ikon-daftar,
+.btn.tombol-ganti:focus .ikon-daftar {
+  opacity: 1;
+  visibility: visible;
+  color: #56813c;
+  transition-delay: 0s;
+}
+
+
+.btn.btn-outline-secondary {
+    padding: 0.6% 3%;
+    background: #fff;
+    border: 2px solid #56813c;
+    font-weight: 600;
+    color: #56813c;
+    transition: border background-color color 0.3s ease;
+    vertical-align: auto;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.btn.btn-outline-secondary:hover {
+    background-color: #bbbeb9;
+    color: #fff;
+    border: 2px solid #bbbeb9;
+}

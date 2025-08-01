@@ -1,0 +1,382 @@
+/* ===================== RESET & BASE STYLES ===================== */
+*, *::before, *::after { 
+    box-sizing: border-box; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', 'Poppins', 'Nunito', sans-serif;
+    background-color: #f5f5f5;
+}
+
+/* Reset list styles */
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Reset link styles */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+[data-anim] {
+  opacity: 0;
+}
+[data-anim].animate__animated {
+  opacity: 1; /* Akan muncul saat class animate__animated ditambahkan */
+}
+
+/* ===================== HEADER HERO SECTION ===================== */
+.header-hero {
+    position: relative; /* PENTING untuk overlay */
+    display: flex;
+    flex-direction: column;
+    height: 850px;
+    background: url(/assets/image.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 94%;
+    padding: 50px;
+    margin: 3%;
+    border-radius: 50px;
+    align-items: center;
+    overflow: hidden; /* Agar overlay mengikuti border-radius */
+}
+
+/* Overlay untuk background */
+.header-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 80, 36, 0.6);
+    border-radius: 50px;
+    z-index: 1;
+}
+
+/* ===================== HEADER MENU LINE ===================== */
+.header-menu-line {
+    position: relative;
+    z-index: 3; /* Di atas overlay */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 15%;
+}
+
+/* ===================== LOGO SECTION ===================== */
+.logo img {
+    height: 60px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+/* ===================== NAVIGATION STYLES ===================== */
+nav {
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+}
+
+nav li {
+    position: relative;
+}
+
+/* Main navigation links */
+nav > ul > li > a {
+    text-decoration: none;
+    color: #ffffff; /* Hijau terang */
+    font-weight: 300;
+    font-family: 'Nunito', sans-serif;
+    padding: 12px 18px;
+    display: block;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    font-size: 16px;
+}
+
+nav > ul > li > a:hover {
+    color: #65fd00;
+}
+
+/* ===================== DROPDOWN STYLES ===================== */
+.dropdown-nav {
+    list-style: none;
+    margin: 0;
+    padding: 8px 0;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    background: white;
+    min-width: 240px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    z-index: 3;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    
+    /* Flexbox column untuk dropdown vertikal */
+    display: flex;
+    flex-direction: column;
+    
+    /* Animasi scale dari atas */
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleY(0);
+    transform-origin: top center;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Show dropdown on hover */
+nav li:hover .dropdown-nav {
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+}
+
+/* Dropdown items */
+.dropdown-nav li {
+    width: 100%;
+}
+
+.dropdown-nav a {
+    color: #333;
+    font-weight: 500;
+    padding: 14px 20px;
+    display: block;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    border-radius: 8px;
+    margin: 2px 8px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.dropdown-nav a:hover {
+    color: #2afd00;
+    background-color: #f8f9fa;
+    transform: translateX(5px);
+}
+
+/* ===================== BUTTON SECTION ===================== */
+.but-col {
+    position: relative;
+    z-index: 2;
+}
+
+.but-col .btn {
+    background: linear-gradient(135deg, #70fa00, #2afd00);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(112, 250, 0, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.but-col .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(112, 250, 0, 0.4);
+    background: linear-gradient(135deg, #2afd00, #70fa00);
+}
+
+.but-col .btn:active {
+    transform: translateY(0);
+}
+
+.hero-text {
+    text-align: center;
+    z-index: 2;
+}
+
+.smp-it h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: #ffffff;
+    font-size: 60px;
+}
+
+.asy-syadzili h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: #ffffff;
+    font-size: 60px;
+    display: inline-block;
+}
+
+.welcome-to h3 {
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+    color: #2afd00;
+    font-weight: 600;
+    font-size: large;
+    display: inline-block;
+}
+
+.about-us {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0 5% 20% 5%;
+    height: 900px;
+    justify-content: center;
+    gap: 10rem;
+    background-color: #ffffff;
+}
+
+.text-bawah-hero {
+    width: 40%;
+    display: block;
+    margin-top: 10%;
+}
+
+.judul-about h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: x-large;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.judul-about h1 {
+    color: #ecc74a;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+}
+
+.text-bawah-hero p {
+    font-size: large;
+}
+
+.about-gambar {
+    height: 90%;
+    display: inline-block;
+    margin-top: 10%;
+    width: 35%;
+}
+
+.about-gambar img {
+    max-width: 100%; /* Lebar maksimal sesuai container */
+    height: auto;    /* Tinggi otomatis agar proporsi tetap */
+    display: block;
+}
+/* ===================== RESPONSIVE DESIGN ===================== */
+@media (max-width: 1024px) {
+    .header-hero {
+        height: 700px;
+        padding: 40px;
+        border-radius: 30px;
+    }
+    
+    nav ul {
+        gap: 20px;
+    }
+    
+    nav > ul > li > a {
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-hero {
+        height: 600px;
+        width: 96%;
+        margin: 2%;
+        padding: 30px;
+        border-radius: 25px;
+        background-attachment: scroll; /* Fixed tidak bagus di mobile */
+    }
+    
+    .header-hero::before {
+        border-radius: 25px;
+    }
+    
+    .header-menu-line {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .dropdown-nav {
+        position: static;
+        box-shadow: none;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+    
+    .but-col .btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-hero {
+        height: 500px;
+        padding: 20px;
+        border-radius: 20px;
+    }
+    
+    nav > ul > li > a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+    
+    .logo img {
+        height: 40px;
+    }
+}
+
+/* ===================== ADDITIONAL UTILITIES ===================== */
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus styles untuk accessibility */
+nav a:focus,
+.btn:focus {
+    outline: 2px solid #70fa00;
+    outline-offset: 2px;
+}
+
+/* Loading animation untuk background image */
+.header-hero {
+    background-color: #333; /* Fallback color saat gambar loading */
+}
+
+/* Text selection color */
+::selection {
+    background-color: #70fa00;
+    color: white;
+}

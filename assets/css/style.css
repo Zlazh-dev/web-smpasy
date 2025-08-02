@@ -240,12 +240,13 @@ nav li:hover .dropdown-nav {
 
 .about-us {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     padding: 0 5% 20% 5%;
     height: 900px;
     justify-content: center;
     gap: 10rem;
     background-color: #ffffff;
+    overflow: hidden;
 }
 
 .text-bawah-hero {
@@ -262,7 +263,7 @@ nav li:hover .dropdown-nav {
 }
 
 .judul-about h1 {
-    color: #ecc74a;
+    color: #2afd00;
     font-family: 'Montserrat', sans-serif;
     font-weight: bolder;
 }
@@ -282,6 +283,79 @@ nav li:hover .dropdown-nav {
     max-width: 100%; /* Lebar maksimal sesuai container */
     height: auto;    /* Tinggi otomatis agar proporsi tetap */
     display: block;
+}
+
+img.animate__animated {
+    display: inline-block;
+}
+
+.statistik {
+    height: 1000px;
+    padding: 15px 15px;
+    background-color: #f5f5f5;
+    display: block;
+    overflow: hidden;
+}
+
+.sub {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.triple-card {
+    padding: 10px; margin-left: 1%; margin-right: 1%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    margin-left: 1%; margin-right: 1%; padding: 30px; border-radius: 30px; 
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+
+.header-text {
+    margin-left: 10%; margin-right: 10%; display: flex; flex-direction: column; align-items: center;
+    margin-top: 5%;
+}
+
+.text-isi {
+    text-align: center;
+    padding-left: 100px; padding-right: 100px; margin-bottom: 5%;
+}
+
+.judul h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: #2afd00;
+}
+
+.judul {
+    margin-bottom: 2%;
+}
+
+.sub-head {
+    font-family: 'Poppins', sans-serif;
+    font-size: x-large;
+    text-transform: uppercase;
+}
+
+.card-head {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    margin-bottom: 80%;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.card-head h2 {
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 /* ===================== RESPONSIVE DESIGN ===================== */
 @media (max-width: 1024px) {
